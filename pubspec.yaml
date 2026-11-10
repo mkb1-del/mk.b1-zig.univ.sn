@@ -1,0 +1,111 @@
+name: my_app
+description: "Sunu Yaakaar - Application de santé pour le suivi médical"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Icônes Material
+  cupertino_icons: ^1.0.6
+
+  # Backend & Base de données
+  supabase_flutter: ^2.5.0
+
+  # Requêtes HTTP (nécessaire pour récupérer les blobs audio/photo sur le web)
+  http: ^1.2.0
+
+  # Détection de la connexion internet (bandeau « pas de connexion »)
+  connectivity_plus: ^6.1.0
+
+  # Enregistrement audio (messages vocaux)
+  record: ^5.1.0
+  audioplayers: ^5.2.1
+
+  # Gestion des fichiers et chemins
+  path_provider: ^2.1.3
+  image_picker: ^1.1.1
+
+  # Affichage images réseau
+  cached_network_image: ^3.3.1
+
+  # Notifications locales (rappels de rendez-vous et de prise de médicaments)
+  flutter_local_notifications: ^17.1.0
+  timezone: ^0.9.3
+
+  # Code PIN
+  pin_code_fields: ^8.0.1
+
+  # Stockage sécurisé du code PIN (Keystore Android / Keychain iOS)
+  flutter_secure_storage: ^9.2.2
+
+  # Formatage dates
+  intl: ^0.19.0
+
+  # Génération PDF
+  pdf: ^3.10.8
+
+  # Téléchargement / partage du PDF de l'ordonnance (web et mobile)
+  printing: ^5.12.0
+
+  # Graphiques (Évolution des symptômes)
+  fl_chart: ^0.66.2
+
+  # Code QR du ticket de rendez-vous
+  qr_flutter: ^4.1.0
+  package_info_plus: ^9.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+  # Outils de génération de l'icône et de l'écran de démarrage (ruban rose)
+  flutter_launcher_icons: ^0.14.1
+  flutter_native_splash: ^2.4.1
+
+flutter:
+  uses-material-design: true
+
+  # Assets (Images et icônes)
+  # ⚠️ IMPORTANT : Ces dossiers doivent exister physiquement dans ton projet
+  assets:
+    - assets/images/
+    - assets/icons/
+
+  # Polices (optionnel, décommente si tu as ajouté des fonts)
+  # fonts:
+  #   - family: Roboto
+  #     fonts:
+  #       - asset: assets/fonts/Roboto-Regular.ttf
+  #       - asset: assets/fonts/Roboto-Bold.ttf
+  #         weight: 700
+
+# ---------------------------------------------------------------------------
+# Icône de l'application (commande : dart run flutter_launcher_icons)
+# Les images sont dans assets/icon/ (dossier au singulier, à la racine du projet).
+# ---------------------------------------------------------------------------
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "#C2185B"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+
+# ---------------------------------------------------------------------------
+# Écran de démarrage : fond rose, ruban blanc
+# (commande : dart run flutter_native_splash:create)
+# ---------------------------------------------------------------------------
+flutter_native_splash:
+  color: "#C2185B"
+  image: assets/icon/icon_foreground.png
+  android: true
+  ios: false
+  web: false
+  android_12:
+    color: "#C2185B"
+    image: assets/icon/icon_foreground.png

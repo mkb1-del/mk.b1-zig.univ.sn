@@ -1,0 +1,84 @@
+name: my_app
+description: "BreastCare - Application de santé pour le suivi médical"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # ✅ Icônes Material
+  cupertino_icons: ^1.0.6
+
+  # ✅ Supabase (Backend)
+  supabase_flutter: ^2.0.0
+
+  # ✅ Enregistrement audio
+  record: ^5.0.0
+
+  # ✅ Lecture audio
+  audioplayers: ^5.2.1
+
+  # ✅ Chemin de stockage
+  path_provider: ^2.1.1
+
+  # ✅ Sélection d'images (galerie/caméra)
+  image_picker: ^1.0.4
+
+  # ✅ Rogner les images
+  image_cropper: ^5.0.1
+
+  # ✅ Affichage d'images en cache
+  cached_network_image: ^3.3.0
+
+  # ✅ Génération PDF
+  pdf: ^3.10.4
+  printing: ^5.11.0
+
+  # ✅ État de l'application
+  provider: ^6.1.1
+
+  # ✅ Formatage de dates
+  intl: ^0.19.0
+
+  # ✅ HTTP requests
+  http: ^1.1.0
+
+  # ✅ Permissions
+  permission_handler: ^11.0.0
+
+  # ✅ Notifications
+  flutter_local_notifications: ^16.3.0
+
+  # ✅ Partage de fichiers
+  share_plus: ^7.2.1
+
+  # ✅ File Picker (documents)
+  file_picker: ^6.1.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  # ✅ Linter pour code qualité
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # ✅ Assets (images, fichiers)
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/chat_bg.png
+
+  # ✅ Polices personnalisées (optionnel)
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
